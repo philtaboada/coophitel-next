@@ -36,7 +36,6 @@ export const login = async ({ email, password }: signInProps) => {
         }
     } catch (error) {
         console.error('Error al iniciar sesión:', error);
-        // Puedes devolver un mensaje de error más específico si lo deseas
         return 'error';
     }
 }
@@ -62,7 +61,6 @@ export const SignUp = async ({ password, ...userData }: SignUpParams) => {
         console.error('Error', error);
     }
 }
-
 
 export const getLoggedIn = () => {
     return !!cookies().get("jwt-token")
